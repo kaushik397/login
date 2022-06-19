@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/login.dart';
 
+import 'form.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.name}) : super(key: key);
   final String name;
@@ -51,7 +53,19 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               child: const Text("Log out"),
-            )
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FormPage()),
+                );
+              },
+              child: const Text("Log out"),
+            ),
           ],
         ),
       ),
